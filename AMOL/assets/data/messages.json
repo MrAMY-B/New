@@ -1,0 +1,8 @@
+[
+    { "id": 1, "name": "AMOL BHARSAKLE", "mobile": 8357896535, "email": "amol@gmail.com", "subject": "Demo", "message": "Demo Message Form json File" },
+    { "id": 2, "name": "Milind BHARSAKLE", "mobile": 8527419635, "email": "milind@gmail.com", "subject": "Demo", "message": "Demo Message Form json File" },
+    { "id": 3, "name": "Abhay BHARSAKLE", "mobile": 8357896535, "email": "abhay@gmail.com", "subject": "Demo", "message": "Demo Message Form json File" },
+    { "id": 4, "name": "Aadesh BHARSAKLE", "mobile": 8357896535, "email": "aadesh@gmail.com", "subject": "Demo", "message": "Demo Message Form json File" },
+    { "id": 5, "name": "Lokesh BHARSAKLE", "mobile": 8357896535, "email": "lokesh@gmail.com", "subject": "Demo", "message": "Demo Message Form json File" },
+    { "id": 6, "name": "Piyush BHARSAKLE", "mobile": 8357896535, "email": "piyush@gmail.com", "subject": "Demo", "message": "Demo Message Form json File" }
+]
