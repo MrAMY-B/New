@@ -1,0 +1,114 @@
+/* You can add global styles to this file, and also import other style files */
+
+*{  font-family: Lobster; }
+html, body { height: 100%;  scroll-behavior: smooth; }
+body { margin: 0; }
+
+.spacer{
+    flex: 1 1 auto;
+}
+a:hover{
+    color: #303030;
+}
+
+.indigo-pink{
+        background-color: #3f51b5 !important;
+        color: white;
+}
+.deep-purple{
+        background-color: #673ab7 !important;
+        color: white;
+}
+.pink-blue-gray{
+        background-color: #e91e63 !important;
+        color: white;
+}
+.purple-green{
+        background-color: #9c27b0 !important;
+        color: white;
+}
+.dark-cyan{
+        background-color: #44d9e6 !important;
+        color:white;
+}
+.i-p, .d-p {
+        background-color: #fafafa !important;
+}
+.p-b-g, .p-g{
+        background-color: #303030 !important;
+        color: #e5e5e5;
+}
+.d-c{
+    background-color: #f0f0f0;
+}
+.theme-text-i-p{
+    color: #e91e63 ;
+}
+.theme-text-d-p{
+    color: #39395e;
+}
+.theme-text-p-b-g{
+   color: #9dded9 ;
+}
+.theme-text-p-g{
+    color: #69f0ae;
+}
+.theme-text-d-c{
+    color: #e91e63;
+}
+
+.header-bg-on-hover-indigo-pink:hover{
+    background-color: #3f51b5 !important
+}
+.header-bg-on-hover-deep-purple:hover{
+    background-color: #673ab7 !important
+}
+.header-bg-on-hover-pink-blue-gray:hover{
+    background-color: #e91e63 !important
+}
+.header-bg-on-hover-purple-green:hover{
+    background-color: #9c27b0 !important
+}
+.header-bg-on-hover-dark-cyan:hover{
+    background-color: #44d9e6 !important
+}
+
+
+/* 
+ mat-sidenav-content{
+    padding:5px 20px 20px;
+}
+ */
+mat-sidenav{
+    background-color: #3f51b5;
+    color:white;
+    width: 250px;
+}
+
+.primary-on-hover:hover{
+    color:#3f51b5;
+    animation-duration: 1s;
+    animation-name: swing;
+}
+@keyframes swing{
+    0%   { transform: rotate(0deg);}
+    25%  { transform: rotate(30deg);}
+    50%  { transform: rotate(-30deg);}
+    100% {transform: rotate(0deg);}
+}
+.primary-underline{
+    border-bottom: 5px solid #3f51b5;
+}
+.danger-underline{
+    border-bottom: 5px solid #dc3545;
+}
+.dark-underline{
+    border-bottom: 5px solid #343a40;
+}
+.light-underline{
+    border-bottom: 5px solid #ffffff;
+}
+
+.mat-display-1, .mat-display-2, .mat-display-3, .mat-display-4, .mat-title,.mat-subheading{   
+    font-family: Lobster !important;
+}

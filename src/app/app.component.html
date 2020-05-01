@@ -1,0 +1,131 @@
+<mat-toolbar color="primary" [class]="header" class="head-nav-bar mat-elevation-z4">
+  <div>
+    <button mat-button> AM<mat-icon>eco</mat-icon>L </button>
+  </div>
+  <div class="spacer"></div>
+ <div class="d-sm-block d-none">
+  <button mat-button routerLinkActive="accent"  routerLink="">Home</button>
+  <button mat-button routerLink="/about-us">About-Us</button>
+  <button mat-button routerLink="/development"> Development</button>
+  <button mat-button routerLink="/contact-us">Contact Us</button>
+  <button mat-button  routerLink="/team">Team</button>
+ </div>
+ <button mat-icon-button (click)="changeTheme()" matTooltip="Tap To Change Theme"> <mat-icon>donut_small</mat-icon> </button>
+</mat-toolbar>  
+<mat-divider class="d-sm-none"></mat-divider>
+<mat-toolbar [class]="header"  class="d-sm-none" style="height: 33px;">
+  
+    <a mat-button href="mailto:amolbharsakle1@gmail.com"  target="_blank">
+      <i class="fab fa-google-plus-g"></i>
+    </a>
+    <div class="spacer"></div>
+    <a mat-button href="https://www.facebook.com/amol.bharsakle1/" target="_blank">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <div class="spacer"></div>
+    <a mat-icon-button  href="https://github.com/MrAMY-B/" target="_blank">
+      <i class="fab fa-github"></i>
+    </a>
+    <div class="spacer"></div>
+    <a mat-button href="tel:+918357896535">
+      <i class="fas fa-mobile-alt"></i>
+    </a>
+</mat-toolbar>
+<!------------ SIde Nave Start ------------------>
+<mat-sidenav-container>
+  <!------------ SIde Panel Starts ------------------>
+  <mat-sidenav #headSideNav mode="over">
+  
+    <mat-list>
+  <!---- Heading ---->
+      <mat-list-item> 
+        <button mat-icon-button> <mat-icon (click)="headSideNav.close()">highlight_off</mat-icon> </button>
+        <mat-icon matListIcon>eco</mat-icon>
+        <h3 matLine>AMOL</h3>
+      </mat-list-item>
+   
+    <mat-divider></mat-divider>
+      <!---- Heading ---->
+      <a routerLink="" (click)="headSideNav.close()">
+        <mat-list-item mat-ripple> 
+          <mat-icon matListIcon >home</mat-icon>
+          <h3 matLine>Home</h3>
+        </mat-list-item>
+      </a>
+      <mat-divider></mat-divider>
+      <!---- Heading ---->
+      <a routerLink="/about-us" (click)="headSideNav.close()">
+        <mat-list-item mat-ripple> 
+          <mat-icon matListIcon>policy</mat-icon>
+          <h3 matLine>About Us</h3>
+        </mat-list-item>
+      </a>
+      <mat-divider></mat-divider>
+      <!---- Heading ---->
+      <a routerLink="/development" (click)="headSideNav.close()">
+        <mat-list-item mat-ripple> 
+          <mat-icon matListIcon>web</mat-icon>
+          <h3 matLine>Development</h3>
+        </mat-list-item>
+      </a>
+      <mat-divider></mat-divider>
+      <!---- Heading ---->
+      <a routerLink="/team" (click)="headSideNav.close()">
+        <mat-list-item mat-ripple> 
+          <mat-icon matListIcon>recent_actors</mat-icon>
+          <h3 matLine>Team</h3>
+        </mat-list-item>
+      </a>
+      <mat-divider></mat-divider>
+      <!---- Heading ---->
+      <a routerLink="/contact-us" (click)="headSideNav.close()">
+        <mat-list-item mat-ripple> 
+          <mat-icon matListIcon>location_on</mat-icon>
+          <h3 matLine>Contact Us</h3>
+        </mat-list-item>
+      </a>
+      <mat-divider></mat-divider>
+      <!---- Heading ---->
+      
+
+     </mat-list>
+
+  </mat-sidenav>
+  <!------------ SIde Panel Ends ------------------>
+    
+    <mat-sidenav-content [class]="body">
+      <button mat-icon-button class="d-sm-none d-block"><mat-icon (click)="headSideNav.open()">menu</mat-icon></button>
+      <router-outlet></router-outlet>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
+<footer class="container-fluid" [class]="header">
+       <!-- <div class="bg-dark rounded" style=" padding:8% 4% ;margin: -10% 0 10%;">
+            <div class="text-center">
+                Life Matra : Don't Be a Semicolon
+            </div>
+        </div>
+      -->
+        <div class="row py-5">
+              <div class="col-sm-4 py-3 text-center">
+                <p><i class="fas fa-map-marker-alt"></i> Burhanpur (MP). India.</p>
+                    <p><i class="far fa-envelope"></i> Email:<a href="mailto:amolbharsakle1@gmail.com" style="color: white;"> amolbharsakle1@gmail.com</a></p>
+                   <p><i class="fas fa-mobile-alt"></i> Contact Number :<a style="color: white;" href="tel:+918357896535">  +918357896535</a></p>
+              </div>
+              <div class="col-sm-4 py-3 text-center">
+                <a href="#" style="color: white; margin:4px;"><i class="fab fa-github fa-2x"></i></a>
+                <a href="#" style="color: white; margin:4px;"> <i class="fab fa-linkedin fa-2x"></i> </a>
+                <a href="#" style="color: white; margin:4px;"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="#" style="color: white; margin:4px;"><i class="fab fa-google-plus fa-2x"></i></a>
+              </div>
+              <div class="col-sm-4 py-3 text-center">
+                  <p>Designed With</p>
+                  <p><i class="fab fa-angular"></i> Angular&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                  <p><i class="fab fa-html5"></i> HTML5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                  <P><i class="fab fa-css3"></i> CSS3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P>
+              </div>
+        </div>
+        <div class="row py-2">
+            <div class="col-12 text-center" style="font-family: monospace;"><small style="font-family: Arial, Helvetica, sans-serif;">&copy; 2020 | AMOL BHARSAKLE</small></div>
+        </div>
+</footer>

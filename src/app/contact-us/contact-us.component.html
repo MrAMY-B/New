@@ -1,0 +1,85 @@
+<div class="container mb-5">
+    <div class="row justify-content-center pb-2">
+        <div class=" mat-display-3  pb-2 mb-1"><span [class]="'theme-text-'+body" class="primary-underline ">&nbsp;&nbsp;Contact&nbsp;&nbsp;</span> </div>
+    </div>
+    
+    <div class="row ">
+            <div class="col-md-6 p-2 ">
+                <div class="mat-display-2 mb-2 ">Get In Touch</div> 
+                <form #amyForm="ngForm" novalidate>
+            
+                    <mat-form-field appearance="outline" color="accent" style="width: 50%;">
+                            <mat-label>Name</mat-label>
+                            <input type="text" matInput #name="ngModel" name="name" required  [(ngModel)]=msg.name>    
+                            <div *ngIf="name.errors && name.touched">
+                                <mat-error *ngIf="name.errors.required && (name.invalid || name.touched)"> Name is required </mat-error> 
+                            </div>
+                        </mat-form-field>
+                        
+                    
+                        <mat-form-field appearance="outline" color="accent" style="width: 50%;">
+                            <mat-label>Mobile</mat-label>
+                            <input type="number" matInput #mobile="ngModel" name="mobile" required pattern="^\d{10}$"  [(ngModel)]=msg.mobile>
+                            <div *ngIf="mobile.errors && mobile.touched">
+                                <mat-error *ngIf="mobile.errors.required && (mobile.invalid || mobile.touched)"> Mobile Number is required </mat-error>
+                                <mat-error *ngIf="mobile.errors.pattern && (mobile.invalid || mobile.touched)">Mobile number should contain 10 digits number only </mat-error>
+                            </div>
+                        </mat-form-field>
+        
+        
+                        <mat-form-field appearance="outline" color="accent" style="width: 100%;">
+                            <mat-label>Email</mat-label>
+                        <input type="email" matInput #email="ngModel" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"  [(ngModel)]=msg.email>
+                        <div *ngIf="email.errors && email.touched">
+                            <mat-error *ngIf="email.errors.required && (email.invalid || email.touched)"> Email is required </mat-error>
+                            <mat-error *ngIf="email.errors.pattern && (email.invalid || email.touched)">Email pattern should be like abc@xyz.com </mat-error>
+                            </div>
+                    </mat-form-field>
+        
+                        <mat-form-field appearance="outline" color="accent" style="width: 100%;">
+                            <mat-label>Subject</mat-label>
+                        <input type="text" matInput #subject="ngModel" name="suject" required  [(ngModel)]=msg.subject>
+                        <div *ngIf="subject.errors && subject.touched">
+                            <mat-error *ngIf="subject.errors.required && (subject.invalid || subject.touched)"> Subject is required </mat-error>
+                        </div>
+                    </mat-form-field>
+        
+                        <mat-form-field appearance="outline" color="accent" required style="width: 100%;">
+                            <mat-label>Message</mat-label>
+                            <textarea  type="text" matInput #message="ngModel" name="message"  [(ngModel)]=msg.message></textarea>
+                            
+                            <div *ngIf="message.errors && message.touched">
+                                <mat-error *ngIf="message.errors.required && (message.invalid || message.touched)">Message is required </mat-error>
+                            </div>
+                    </mat-form-field>
+                    <button mat-raised-button [disabled]="amyForm.form.invalid && amyForm.form.touched" color="accent" class="px-5" (click)="sendMessage()">SEND</button>
+                    <!--   <button type="submit" (click)="sendMessage()" class="btn btn-primary">Submit</button>    -->
+        
+                </form>
+                
+               
+            </div>
+            <div class="col-md-6 p-4">
+                <div class="mat-display-2 mb-2 text-center">
+                    I am interested in freelance opportunities – especially 
+                    ambitious or large projects. However, if you have other request 
+                    or question, don’t hesitate to contact me using form either.
+                </div> 
+            </div>
+    </div>
+    <div class="row my-5">
+        
+        <div class="col-12 py-5">
+            <div class="mat-display-2 mb-0 ">Reach to Us</div> 
+            <div class="mapouter img-thumbnail">
+                <div class="gmap_canvas">
+                    <iframe width="100%" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=burhanpur&t=&z=7&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    <a href="https://www.embedgooglemap.net" aria-disabled="true"></a>
+                </div>
+                <style>.mapouter{position:relative;text-align:right;}.gmap_canvas {overflow:hidden;background:none!important;}</style>
+            </div>
+        </div>
+    </div>
+
+
+</div>
